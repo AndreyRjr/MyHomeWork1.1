@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class ARArray<E> implements Functionable<E> {
+public class ARArray<E> implements ARArrayInterface<E> {
     /**
      * @author Рыбалкин Андрей
      * @version 1.1

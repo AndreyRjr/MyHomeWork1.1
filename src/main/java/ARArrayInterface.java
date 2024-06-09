@@ -1,4 +1,4 @@
-public interface Functionable<E> extends Iterable<E> {
+public interface ARArrayInterface<E> extends Iterable<E> {
     /**
      * @author Рыбалкин Андрей
      * @version 1.1

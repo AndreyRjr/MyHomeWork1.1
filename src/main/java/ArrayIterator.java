@@ -1,8 +1,9 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class ArrayIterator<E> implements Iterator {
 
-    private int inndex = 0;
+    private int index = 0;
     private E[] values;
 
     ArrayIterator(E[] values) {
@@ -11,11 +12,13 @@ public class ArrayIterator<E> implements Iterator {
 
     @Override
     public boolean hasNext() {
-        return inndex < values.length;
+        return index < values.length;
     }
 
     public E next() {
-        return values[inndex++];
+        if (!hasNext()) {
+            throw new NoSuchElementException("Нет больше элементов для возврата");
+        }
+        return values[index++];
     }
-
 }
